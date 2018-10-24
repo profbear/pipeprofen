@@ -26,7 +26,7 @@ default keymap: <kbd>ctrl</kbd><kbd>alt</kbd><kbd>shift</kbd><kbd>x</kbd>
 
 # coc
 Praise God, St. Benedict and the
-[sqlite coc](https://www.sqlite.org/codeofconduct.html)
+[sqlite coc](/CODE_OF_CONDUCT.md)
 `#usethatword` `#nationalism` :us: :us: :us:
 
 # todo
