@@ -30,6 +30,7 @@ Praise God, St. Benedict and the
 `#usethatword` `#nationalism` :us: :us: :us:
 
 # todo
+1. why doesn't curl work? try require('request') maybe
 1. option toggles keep/replace selected text
 1. ingest `args` from clipboard, like so `$(bash -c args)`
 1. history of previous args

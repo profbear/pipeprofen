@@ -2,27 +2,66 @@ Code Of Conduct
 
 # 1 Overview
 
-Having been encouraged by clients to adopt a written code of conduct, the SQLite developers elected to govern their interactions with each other, with their clients, and with the larger SQLite user community in accordance with the "instruments of good works" from chapter 4 of [The Rule of St. Benedict](https://en.wikipedia.org/wiki/Rule_of_Saint_Benedict). This code of conduct has proven its mettle in thousands of diverse communities for over 1,500 years, and has served as a baseline for many civil law codes since the time of Charlemagne.
+Having been encouraged by clients to adopt a written code of conduct, 
+the SQLite developers elected to govern their interactions with each 
+other, with their clients, and with the larger SQLite user community 
+in accordance with the "instruments of good works" from chapter 4 of 
+[The Rule of St. 
+Benedict](https://en.wikipedia.org/wiki/Rule_of_Saint_Benedict). This 
+code of conduct has proven its mettle in thousands of diverse 
+communities for over 1,500 years, and has served as a baseline for 
+many civil law codes since the time of Charlemagne.
 
 ## 1.1 Users of the SQLite Code
 
-This rule applies to SQLite developers, not to users of the SQLite code. Everyone is free to use the SQLite source code, object code, and/or documentation regardless of their opinion of and adherence to this rule. SQLite has been and continues to be completely free to everyone, without precondition.
+This rule applies to SQLite developers, not to users of the SQLite 
+code. Everyone is free to use the SQLite source code, object code, 
+and/or documentation regardless of their opinion of and adherence to 
+this rule. SQLite has been and continues to be completely free to 
+everyone, without precondition.
 
 ## 1.2 Participation in the SQLite Community
 
-Participants in the SQLite Mailing Lists or other public forums are not required to follow this rule. However, comments posted on mailing lists or forums are expected to be courteous and professional, and should be worded as if they were written by someone who is a follower of this rule. In other words, while participating in the SQLite community, one should speak only the truth in love, honor all, be not angry nor nurse a grudge, do not return evil for evil, be not proud nor a grumbler nor a detractor, avoid depraved speech, hate no one, do not love quarreling, and so forth. Violators brought to the attention of the project leader will be reproved, gently at first but with increasing urgency, and may ultimately be banned if the behavior is not amended.
+Participants in the SQLite Mailing Lists or other public forums are 
+not required to follow this rule. However, comments posted on mailing 
+lists or forums are expected to be courteous and professional, and 
+should be worded as if they were written by someone who is a follower 
+of this rule. In other words, while participating in the SQLite 
+community, one should speak only the truth in love, honor all, be not 
+angry nor nurse a grudge, do not return evil for evil, be not proud 
+nor a grumbler nor a detractor, avoid depraved speech, hate no one, 
+do not love quarreling, and so forth. Violators brought to the 
+attention of the project leader will be reproved, gently at first but 
+with increasing urgency, and may ultimately be banned if the behavior 
+is not amended.
 
 ## 1.3 Core Developers
 
-Because SQLite is [in the public domain](copyright.html), the project does not normally accept patches from outside contributors as such code would carry an implied copyright. In order to keep SQLite completely free and open, all code is written and maintained by a small team of core developers.
+Because SQLite is [in the public domain](/LICENSE), the project 
+does not normally accept patches from outside contributors as such 
+code would carry an implied copyright. In order to keep SQLite 
+completely free and open, all code is written and maintained by a 
+small team of core developers.
 
-All of the current core developers of SQLite have pledged to follow this rule to the best of their ability, and to hold each other accountable for the those parts of the rule that regulate interaction with the larger community. The public also is invited to call us out when we fall short. While the complete rule is good, we make no enforcement of the introspective aspects.
+All of the current core developers of SQLite have pledged to follow 
+this rule to the best of their ability, and to hold each other 
+accountable for the those parts of the rule that regulate interaction 
+with the larger community. The public also is invited to call us out 
+when we fall short. While the complete rule is good, we make no 
+enforcement of the introspective aspects.
 
-In the future, should someone wish to become a core developer of SQLite and is in every way qualified except that he or she does not feel comfortable with some details of this rule (for example, the overtly religious elements), then appropriate adjustments can be made at that point. The objective of the rule is not to impose a particular religious creed, but rather to use time-tested behavioral guidelines to promote a productive and peaceful community.
+In the future, should someone wish to become a core developer of 
+SQLite and is in every way qualified except that he or she does not 
+feel comfortable with some details of this rule (for example, the 
+overtly religious elements), then appropriate adjustments can be made 
+at that point. The objective of the rule is not to impose a 
+particular religious creed, but rather to use time-tested behavioral 
+guidelines to promote a productive and peaceful community.
 
 # 2 The Rule
 
-1.  First of all, love the Lord God with your whole heart, your whole soul, and your whole strength.
+1.  First of all, love the Lord God with your whole heart, your whole 
+soul, and your whole strength.
 2.  Then, love your neighbor as yourself.
 3.  Do not murder.
 4.  Do not commit adultery.
@@ -51,7 +90,8 @@ In the future, should someone wish to become a core developer of SQLite and is i
 27.  Do not swear, for fear of perjuring yourself.
 28.  Utter only truth from heart and mouth.
 29.  Do not return evil for evil.
-30.  Do no wrong to anyone, and bear patiently wrongs done to yourself.
+30.  Do no wrong to anyone, and bear patiently wrongs done to 
+yourself.
 31.  Love your enemies.
 32.  Do not curse those who curse you, but rather bless them.
 33.  Bear persecution for justice's sake.
@@ -63,15 +103,18 @@ In the future, should someone wish to become a core developer of SQLite and is i
 39.  Be not a grumbler.
 40.  Be not a detractor.
 41.  Put your hope in God.
-42.  Attribute to God, and not to self, whatever good you see in yourself.
-43.  Recognize always that evil is your own doing, and to impute it to yourself.
+42.  Attribute to God, and not to self, whatever good you see in 
+yourself.
+43.  Recognize always that evil is your own doing, and to impute it 
+to yourself.
 44.  Fear the Day of Judgment.
 45.  Be in dread of hell.
 46.  Desire eternal life with all the passion of the spirit.
 47.  Keep death daily before your eyes.
 48.  Keep constant guard over the actions of your life.
 49.  Know for certain that God sees you everywhere.
-50.  When wrongful thoughts come into your heart, dash them against Christ immediately.
+50.  When wrongful thoughts come into your heart, dash them against 
+Christ immediately.
 51.  Disclose wrongful thoughts to your spiritual mentor.
 52.  Guard your tongue against evil and depraved speech.
 53.  Do not love much talking.
@@ -79,10 +122,15 @@ In the future, should someone wish to become a core developer of SQLite and is i
 55.  Do not love much or boisterous laughter.
 56.  Listen willingly to holy reading.
 57.  Devote yourself frequently to prayer.
-58.  Daily in your prayers, with tears and sighs, confess your past sins to God, and amend them for the future.
+58.  Daily in your prayers, with tears and sighs, confess your past 
+sins to God, and amend them for the future.
 59.  Fulfill not the desires of the flesh; hate your own will.
-60.  Obey in all things the commands of those whom God has placed in authority over you even though they (which God forbid) should act otherwise, mindful of the Lord's precept, "Do what they say, but not what they do."
-61.  Do not wish to be called holy before one is holy; but first to be holy, that you may be truly so called.
+60.  Obey in all things the commands of those whom God has placed in 
+authority over you even though they (which God forbid) should act 
+otherwise, mindful of the Lord's precept, "Do what they say, but not 
+what they do."
+61.  Do not wish to be called holy before one is holy; but first to 
+be holy, that you may be truly so called.
 62.  Fulfill God's commandments daily in your deeds.
 63.  Love chastity.
 64.  Hate no one.
