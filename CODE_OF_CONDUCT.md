@@ -7,7 +7,7 @@ the SQLite developers elected to govern their interactions with each
 other, with their clients, and with the larger SQLite user community 
 in accordance with the "instruments of good works" from chapter 4 of 
 [The Rule of St. 
-Benedict](https://en.wikipedia.org/wiki/Rule_of_Saint_Benedict). This 
+Benedict](http://infogalactic.com/info/Rule_of_Saint_Benedict). This 
 code of conduct has proven its mettle in thousands of diverse 
 communities for over 1,500 years, and has served as a baseline for 
 many civil law codes since the time of Charlemagne.
