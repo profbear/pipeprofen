@@ -1,0 +1,44 @@
+<idea-plugin>
+  <!--
+    ~ Copyright (c) 2018 Unbearable Professional
+    ~
+    ~ I dedicate any and all copyright interest in this software to the
+    ~ public domain. I make this dedication for the benefit of the public at
+    ~ large and to the detriment of my heirs and successors. I intend this
+    ~ dedication to be an overt act of relinquishment in perpetuity of all
+    ~ present and future rights to this software under copyright law.
+    -->
+  <id>pw.unbear.ijplug</id>
+
+  <name>Pipeprofen</name>
+  <version>0.0.1</version>
+  <vendor email="professor@unbear.pw"
+          url="http://www.unbear.pw">Unbearable Professional</vendor>
+
+  <description>
+    <![CDATA[Selected editor lines are piped to a shell command whose output replaces those lines]]>
+  </description>
+
+  <change-notes/>
+
+  <idea-version since-build="173.0"/>
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+  </extensions>
+
+  <actions>
+    <action class="pw.unbear.ijplug.PiperDown"
+            description="Pipes selected text to a shell"
+            id="pw.unbear.ijplug.PiperDown"
+            text="Pipeprofen">
+      <add-to-group
+          group-id="EditorPopupMenu"
+          anchor="last"/>
+      <keyboard-shortcut
+          keymap="$default"
+          first-keystroke="shift ctrl alt X"/>
+    </action>
+  </actions>
+
+</idea-plugin>
