@@ -9,7 +9,7 @@ output replaces those lines.
 default keymap: <kbd>ctrl</kbd><kbd>alt</kbd><kbd>shift</kbd><kbd>x</kbd>
 
 1. highlight lots of text
-    1. note: works for multiple carets, too (latest jetbrains)
+    1. **note**: works for multiple carets, too (latest jetbrains)
 1. press keyboard shortcut
 1. enter the command that bash runs
 
@@ -22,6 +22,8 @@ default keymap: <kbd>ctrl</kbd><kbd>alt</kbd><kbd>shift</kbd><kbd>x</kbd>
     remove selection
 
 ## demo
+_the demo below was created from [this screencast.md file](/screencast.md)_
+
 ![nice](screencast-pipeprofen.gif)
 
 # coc
@@ -30,12 +32,16 @@ Praise God, St. Benedict and the
 `#usethatword` `#nationalism` :us: :us: :us:
 
 # todo
-1. why doesn't curl work? try require('request') maybe
 1. option toggles keep/replace selected text
-1. ingest `args` from clipboard, like so `$(bash -c args)`
-1. history of previous args
+1. default no args text to `xargs -I{} bash -c '{}'`
+    1. or create a token to simplify the re-typing of common args
+1. environment variables
+1. history holding of previous args (and inputs? meh)
+1. ingest `args` from clipboard, like so `$(bash -c clipboard)`
 1. customize `bash -c` in case bash is not present
-1. test on windows
+1. tokenize editor contents to use tokens as a testing framework
+    1. e.g.: read editor contents, parse AST, pipe code to bash args
+1. does it even work on windows?
 
 # thanks
 Thank you for using my plugin, no bullshit.
