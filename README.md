@@ -22,7 +22,7 @@ default keymap: <kbd>ctrl</kbd><kbd>alt</kbd><kbd>shift</kbd><kbd>x</kbd>
     remove selection
 
 ## demo
-
+![nice](screencast-pipeprofen.gif)
 
 # coc
 Praise God, St. Benedict and the

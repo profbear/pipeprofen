@@ -82,7 +82,7 @@ class PiperDown : AnAction() {
 
     private fun getArgs(project: Project) = Messages.showInputDialog(
         project,
-        process.joinToString(" ") + "\${this input box}",
+        process.joinToString(" ") + " \${this input box}",
         "Pipe selected text to",
         AllIcons.Actions.Run_anything,
         project.getUserData(lastArgs),
