@@ -1,3 +1,5 @@
+[![](https://img.shields.io/jetbrains/plugin/d/11257-pipeprofen.svg)](https://plugins.jetbrains.com/plugin/11257-pipeprofen)
+
 # Pipeprofen
 _[pahy-pyoo-proh-fuhn, pahy-peh-proh-fen]_ ; **noun**
 1. an intellij plugin ingesting selected editor lines,

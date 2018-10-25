@@ -11,12 +11,41 @@
   <id>pw.unbear.ijplug</id>
 
   <name>Pipeprofen</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <vendor email="professor@unbear.pw"
-          url="http://www.unbear.pw">Unbearable Professional</vendor>
+          url="http://www.unbear.pw">Unbearable Professional
+  </vendor>
 
   <description>
-    <![CDATA[Selected editor lines are piped to a shell command whose output replaces those lines]]>
+    <![CDATA[
+
+<a href="https://github.com/profbear/pipeprofen/">pipeprofen on github</a>
+
+<p>Runs the selected lines in the editor through a custom bash
+shell command and inserts the value into the editor's
+selection region. Replaces lines with the output (stderr and
+stdout) from the process. Works with multiple carets by
+piping each selection region separately into their own process.
+</p>
+
+<p>Invoke with
+<kbd>ctrl</kbd>-<kbd>alt</kbd>-<kbd>shift</kbd>-<kbd>x</kbd>,
+or by selecting text and right-click the editor to show the
+context menu. The menu item is called "Pipe selected text bash".</p>
+
+<p>If no lines are selected, use the keyboard shortcut to open
+the bash argument window.
+</p>
+
+<p>Note that you must have bash in your environment's PATH.</p>
+
+<p>Being able to run anything in the editor and change the text
+was inspired by
+<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval">
+emacs's lisp eval-last-sexp.
+</a></p>
+
+]]>
   </description>
 
   <change-notes/>
@@ -29,9 +58,9 @@
 
   <actions>
     <action class="pw.unbear.ijplug.PiperDown"
-            description="Pipes selected text to a shell"
+            description="Pipe selected text to bash"
             id="pw.unbear.ijplug.PiperDown"
-            text="Pipeprofen">
+            text="Pipe selected text to bash">
       <add-to-group
           group-id="EditorPopupMenu"
           anchor="last"/>

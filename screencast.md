@@ -6,7 +6,8 @@ Why?
 
 ## screencast
 this file exists to create a screencast of the plugin in action
-sort of like a testing framework ... [that gives me an idea!](/README.md#todo)
+sort of like a testing framework ... 
+[that gives me an idea!](/README.md#todo)
 
 ## explanation
 _a quick note on the examples we'll run here shortly_
@@ -74,8 +75,8 @@ elit.
 # pipes work like the shell args
 _more piping examples_
 
-bash args: `sort | uniq`
-bash args: `sort | tac`
+- bash args: `sort | uniq`
+- bash args: `sort | tac`
 ```kotlin
 import java.awt.Graphics2D
 import java.awt.Graphics
