@@ -1,11 +1,35 @@
-[![](https://img.shields.io/jetbrains/plugin/d/11257-pipeprofen.svg)](https://plugins.jetbrains.com/plugin/11257-pipeprofen)
-
 # Pipeprofen
-_[pahy-pyoo-proh-fuhn, pahy-peh-proh-fen]_ ; **noun**
-1. an intellij plugin ingesting selected editor lines,
-piping to a custom bash command, and whose process
-output replaces those lines.
-2. alleviates headache symptoms
+_[pahy-pyoo-proh-fuhn, pahy-peh-proh-fen]_; **noun**
+
+[![](https://img.shields.io/jetbrains/plugin/v/11257-pipeprofen.svg)](https://plugins.jetbrains.com/plugin/11257-pipeprofen)
+[![](https://img.shields.io/jetbrains/plugin/d/11257-pipeprofen.svg)](https://plugins.jetbrains.com/plugin/11257-pipeprofen)
+![](https://img.shields.io/github/issues-raw/profbear/pipeprofen/.svg)
+
+
+**Run a bash shell command on the selected lines.**
+
+Execute a bash process that pipes the selected lines as if they were an input file, same as **stdin**, through a custom bash shell command. The output from the process replaces the selection with **stderr** and **stdout**. Works with multiple carets by piping each selection region separately into their own process. Also works with no carets.
+
+**General usage instructions**  
+Invoke with ctrl\-alt\-shift\-x, or by selecting text and right-click the editor to show the context menu. The menu item is called **Pipe selected text to bash**. When no lines are selected, use the keyboard shortcut to open the bash argument window.
+
+**Demo**  
+![example](https://i.imgur.com/yajQkJf.gif)
+
+**Features**
+
+*   Remembers the last command arguments
+*   Treats output containing either stderr and stdout the same
+*   Works with multiple carets, 1 caret and no carets
+*   Bug-free on Linux
+*   Actively supported - [open an issue on github](https://github.com/profbear/pipeprofen/issues)
+*   Unlicensed, free public domain source
+
+**Note:** you must have bash in your environment's PATH.
+
+Being able to run anything in the editor and change the buffer text was heavily inspired by emacs's lisp expressions [(eval-last-sexp), (eval-defun) and (eval-expression)](https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval). This plugin is intended to be a drop-in replacement for the antiquated Shell Process plugin.
+
+Please, let me know if this works for you in Windows.
 
 ## usage
 default keymap: <kbd>ctrl</kbd><kbd>alt</kbd><kbd>shift</kbd><kbd>x</kbd>
