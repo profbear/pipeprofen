@@ -53,7 +53,7 @@ This section covers the basics of working with IntelliJ Platform. I hate the way
 _demonstrate ability to use pipes in the bash args_
 
 bash args: `xargs -I {} curl -sk {} | jq '[.results[]|.name]'`
-```json
+```yaml
 https://swapi.co/api/starships/
 ```
 
@@ -73,31 +73,9 @@ elit.
 ```
 
 # pipes work like the shell args
-_more piping examples_
-
-- bash args: `sort | uniq`
-- bash args: `sort | tac`
-```kotlin
-import java.awt.Graphics2D
-import java.awt.Graphics
-import com.intellij.util.ui.UIUtil.isValidFont
-import java.awt.Graphics
-import com.util.xmlb.XmlSerializerUtil
-import com.intellij.openapi.util.Pair
-import bun.schwing.SwingUtilities2
-import com.intellij.openapi.util.Pair
-import bun.schwing.SwingUtilities2
-import com.intellij.openapi.util.IconLoader
-
-class NoClass {
-    private final val noStyle
-    protected val what
-    public val ever
-    private val whatEver
-    // todo improve readability
-    protected val hatNever
-    private val wutSliver
-}
+_piping examples_
+- bash args: `seq 9 | tac`
+```
 ```
 
 # install npm packages 

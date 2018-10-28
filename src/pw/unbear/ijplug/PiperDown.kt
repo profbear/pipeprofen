@@ -51,9 +51,13 @@ class PiperDown : AnAction() {
      * but only after the `update` validates that the action is visible.
      */
     override fun actionPerformed(e: AnActionEvent) {
-        val editor = e.getRequiredData(CommonDataKeys.EDITOR)
+        val project = e.project ?: return
+        val editor = try {
+            e.getRequiredData(CommonDataKeys.EDITOR)
+        } catch (e: Exception) {
+            return
+        }
         val document = editor.document
-        val project = e.project!!
         val selectionModel = editor.selectionModel
         val starts = selectionModel.blockSelectionStarts
         val ends = selectionModel.blockSelectionEnds
@@ -76,8 +80,8 @@ class PiperDown : AnAction() {
 
     /** determines visibility and availability of this action in the context menu and keymap */
     override fun update(e: AnActionEvent) {
-        val editor = CommonDataKeys.EDITOR.getData(e.dataContext)
-        e.presentation.isVisible = editor?.selectionModel?.hasSelection()!!
+        val editor = CommonDataKeys.EDITOR.getData(e.dataContext) ?: return
+        e.presentation.isVisible = editor.selectionModel.hasSelection()
     }
 
     private fun getArgs(project: Project) = Messages.showInputDialog(
