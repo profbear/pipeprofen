@@ -8,10 +8,21 @@ _[pahy-pyoo-proh-fuhn, pahy-peh-proh-fen]_; **noun**
 
 **Run a bash shell command on the selected lines.**
 
-Execute a bash process that pipes the selected lines as if they were an input file, same as **stdin**, through a custom bash shell command. The output from the process replaces the selection with **stderr** and **stdout**. Works with multiple carets by piping each selection region separately into their own process. Also works with no carets.
+Execute a bash process that pipes the selected lines as if 
+they were an input file, same as **stdin**, through a 
+custom bash shell command. The output from the process 
+replaces the selection with **stderr** and **stdout**. 
+Works with multiple carets by piping each selection region 
+separately into their own process. Also works with no 
+carets.
 
 **General usage instructions**  
-Invoke with ctrl\-alt\-shift\-x, or by selecting text and right-click the editor to show the context menu. The menu item is called **Pipe selected text to bash**. When no lines are selected, use the keyboard shortcut to open the bash argument window.
+Invoke with 
+<kbd>ctrl</kbd><kbd>alt</kbd><kbd>shift</kbd><kbd>x</kbd>, 
+or by selecting text and right-click the editor to show the 
+context menu. The menu item is called **Pipe selected text 
+to bash**. When no lines are selected, use the keyboard 
+shortcut to open the bash argument window.
 
 **Demo**  
 ![example](https://i.imgur.com/yajQkJf.gif)
@@ -27,9 +38,12 @@ Invoke with ctrl\-alt\-shift\-x, or by selecting text and right-click the editor
 
 **Note:** you must have bash in your environment's PATH.
 
-Being able to run anything in the editor and change the buffer text was heavily inspired by emacs's lisp expressions [(eval-last-sexp), (eval-defun) and (eval-expression)](https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval). This plugin is intended to be a drop-in replacement for the antiquated Shell Process plugin.
-
-Please, let me know if this works for you in Windows.
+Being able to run anything in the editor and change the 
+buffer text was heavily inspired by emacs's lisp 
+expressions 
+[(eval-last-sexp), (eval-defun) and (eval-expression)](https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval).
+This plugin is intended to be a drop-in replacement for
+the antiquated Shell Process plugin.
 
 ## usage
 default keymap: <kbd>ctrl</kbd><kbd>alt</kbd><kbd>shift</kbd><kbd>x</kbd>
@@ -67,7 +81,6 @@ Praise God, St. Benedict and the
 1. customize `bash -c` in case bash is not present
 1. tokenize editor contents to use tokens as a testing framework
     1. e.g.: read editor contents, parse AST, pipe code to bash args
-1. does it even work on windows?
 
 # thanks
 Thank you for using my plugin, no bullshit.
