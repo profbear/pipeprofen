@@ -11,77 +11,28 @@
   <id>pw.unbear.ijplug</id>
 
   <name>Pipeprofen</name>
-  <version>0.0.4</version>
+  <version>1.0.0</version>
   <vendor email="professor@unbear.pw"
           url="http://www.unbear.pw">
     the Unbearable Professional
   </vendor>
 
-  <description><![CDATA[
-<p>
-  <a href="https://github.com/profbear/pipeprofen/">pipeprofen on github</a>
-  | <a href="https://github.com/profbear/pipeprofen/issues">report an issue</a>
-</p>
-
-<p><b>Run a bash shell command on the selected lines.</b></p>
-
-<p>
-  Execute a bash process that pipes the selected lines as
-  if they were an input file, same as <b>stdin</b>, through
-  a custom bash shell command. The output from the process
-  replaces the selection with <b>stderr</b> and <b>stdout</b>.
-  Works with multiple carets by piping each selection region
-  separately into their own process. Also works with no carets.
-</p>
-
-<p>
-  <b>General usage instructions</b>
-  <br/>
-  Invoke with
-  <kbd>ctrl</kbd>-<kbd>alt</kbd>-<kbd>shift</kbd>-<kbd>x</kbd>,
-  or by selecting text and right-click the editor to show
-  the context menu. The menu item is called <b>Pipe selected
-  text to bash</b>.
-  When no lines are selected, use the keyboard shortcut to open
-  the bash argument window.
-</p>
-
-<p>
-  <b>Demo</b>
-  <br/>
-  <img src="https://i.imgur.com/yajQkJf.gif" alt="example">
-</p>
-
-<b>Features</b>
-<ul>
-  <li>Remembers the last command arguments</li>
-  <li>Treats output containing either stderr and stdout the same</li>
-  <li>Works with multiple carets, 1 caret and no carets</li>
-  <li>Bug-free on Linux</li>
-  <li>Actively supported -
-    <a href="https://github.com/profbear/pipeprofen/issues">
-      open an issue on github</a></li>
-  <li>Unlicensed, free public domain source</li>
-</ul>
-
+  <description><![CDATA[<a href="https://github.com/profbear/pipeprofen/">pipeprofen on github</a> | <a href="https://github.com/profbear/pipeprofen/issues">report an issue</a>
+<p><b>Run a bash shell command on the selected lines.</b>
+Execute a bash process that pipes the selected lines as if they were an input file, same as <b>stdin</b>, through a custom bash shell command. The output from the process replaces the selection with <b>stderr</b> and <b>stdout</b>. Works with multiple carets by piping each selection region separately into their own process. Also works with no carets.</p>
+<p><b>General usage instructions</b>
+Invoke with <kbd>ctrl</kbd>-<kbd>alt</kbd>-<kbd>shift</kbd>-<kbd>x</kbd>, or by selecting text and right-click the editor to show the context menu. The menu item is called <b>Pipe selected text to bash</b>. When no lines are selected, use the keyboard shortcut to open the bash argument window.</p>
+<p><b>Demo</b>
+<img src="https://i.imgur.com/yajQkJf.gif" alt="example"></p>
+<p><b>Features</b>
+<ul><li>Remembers the last command arguments</li><li>Treats output containing either stderr and stdout the same</li><li>Works with multiple carets, 1 caret and no carets</li><li>Bug-free on Linux and Windows</li><li>Actively supported - <a href="https://github.com/profbear/pipeprofen/issues"> open an issue on github</a></li><li>Unlicensed, free public domain source</li></ul></p>
 <p><b>Note:</b> you must have bash in your environment's PATH.</p>
-
-<p>
-  Being able to run anything in the editor and change the buffer text
-  was heavily inspired by emacs's lisp expressions
-  <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval">
-    (eval-last-sexp), (eval-defun) and (eval-expression)</a>. This
-  plugin is intended to be a drop-in replacement for the
-  antiquated Shell Process plugin.
-</p>
-
-<p>Please, let me know if this works for you in Windows.</p>
-
+<p>Being able to run anything in the editor and change the buffer text was heavily inspired by emacs's lisp expressions <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval">(eval-last-sexp), (eval-defun) and (eval-expression)</a>. This plugin is intended to be a drop-in replacement for the antiquated Shell Process plugin.</p>
 ]]></description>
 
   <change-notes/>
 
-  <idea-version since-build="173.0"/>
+  <idea-version since-build="171.0"/>
   <depends>com.intellij.modules.lang</depends>
 
   <extensions defaultExtensionNs="com.intellij">

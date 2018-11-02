@@ -14,15 +14,16 @@ import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
-import com.intellij.openapi.application.ApplicationManager
+import com.intellij.openapi.application.ApplicationManager.getApplication
 import com.intellij.openapi.application.ModalityState
-import com.intellij.openapi.command.WriteCommandAction
+import com.intellij.openapi.command.WriteCommandAction.runWriteCommandAction
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.ui.Messages
+import com.intellij.openapi.ui.Messages.showInputDialog
 import com.intellij.openapi.ui.NonEmptyInputValidator
 import com.intellij.openapi.util.Key
 import com.intellij.openapi.util.TextRange
-import java.nio.file.Files
+import java.io.BufferedReader
+import java.io.InputStreamReader
 import java.util.concurrent.TimeUnit
 
 /** We have a piper down! I repeat, a piper is down! */
@@ -40,83 +41,93 @@ class PiperDown : AnAction() {
      */
     private val process = listOf("bash", "-c")
 
+    private val inputDialogTitle = "Pipe selected text to"
+
+    private val inputDialogMsg = process.joinToString(" ") + " \${this input box}"
+
     /** the last args the user used */
     private val lastArgs = Key.create<String>("args.last")
 
     data class ProcessPipes(val out: String, val err: String)
 
+    /** determines visibility and availability of this action in the context menu and keymap */
+    override fun update(event: AnActionEvent) {
+        val editor = /* early out if the editor is not in focus */
+            CommonDataKeys.EDITOR.getData(event.dataContext) ?: return
+        event.presentation.isVisible = editor.selectionModel.hasSelection()
+    }
+
     /**
-     * main functionality for the action.
-     * we enter this fun upon menu selection or keyboard shortcut execution
-     * but only after the `update` validates that the action is visible.
+     * main functionality for the action:
+     *
+     * - always enters this fun upon keyboard shortcut execution.
+     * - conditionally, we enter this fun upon menu selection, but
+     *   after the `update` validates that the action is visible.
      */
-    override fun actionPerformed(e: AnActionEvent) {
-        val project = e.project ?: return
-        val editor = try {
-            e.getRequiredData(CommonDataKeys.EDITOR)
-        } catch (e: Exception) {
-            return
-        }
+    override fun actionPerformed(event: AnActionEvent) {
+        val project = event.project ?: return
+        val editor = event.getData(CommonDataKeys.EDITOR) ?: return
         val document = editor.document
         val selectionModel = editor.selectionModel
         val starts = selectionModel.blockSelectionStarts
         val ends = selectionModel.blockSelectionEnds
 
-        /* can't invoke `showInputDialog` without performing an `invokeLater` */
-        ApplicationManager.getApplication().invokeLater({
+        /* can't invoke `showInputDialog` without a `getApplication().invokeLater` */
+        getApplication().invokeLater({
+            /* allow the user to cancel */
             getArgs(project)?.let { args ->
+
                 project.putUserData(lastArgs, args)
+
+                /* appetizer */
                 starts.size.minus(1).downTo(0).map {
-                    WriteCommandAction.runWriteCommandAction(project) {
-                        val pipes = executeProcessWithArgs(args, document.getText(TextRange(starts[it], ends[it])))
+                    /* can't modify the document strings without a runWriteCommandAction */
+                    runWriteCommandAction(project) {
+                        val process = processFactory(args)
+                        val input = document.getText(TextRange(starts[it], ends[it]))
+                        val pipes = pipeInputToProcess(input, process)
+
+                        /* enchilada */
                         document.replaceString(starts[it], ends[it], pipes.out + pipes.err)
                     }
                 }
+
                 val all = true
                 selectionModel.removeSelection(all)
             }
         }, ModalityState.NON_MODAL)
     }
 
-    /** determines visibility and availability of this action in the context menu and keymap */
-    override fun update(e: AnActionEvent) {
-        val editor = CommonDataKeys.EDITOR.getData(e.dataContext) ?: return
-        e.presentation.isVisible = editor.selectionModel.hasSelection()
-    }
-
-    private fun getArgs(project: Project) = Messages.showInputDialog(
+    /** show input dialog to obtain user's args */
+    private fun getArgs(project: Project) = showInputDialog(
         project,
-        process.joinToString(" ") + " \${this input box}",
-        "Pipe selected text to",
-        AllIcons.Actions.Run_anything,
+        inputDialogMsg,
+        inputDialogTitle,
+        AllIcons.Toolwindows.ToolWindowRun,
         project.getUserData(lastArgs),
         NonEmptyInputValidator())
 
-    private fun executeProcessWithArgs(args: String, content: String): ProcessPipes {
+    private fun processFactory(args: String): Process? {
         val withArg = process.toMutableList()
         withArg.add(args)
-        val pb = ProcessBuilder(*withArg.toTypedArray())
+        return ProcessBuilder(*withArg.toTypedArray()).start()
+    }
 
-        // note is there temporary storage for us?
-        val inp = Files.createTempFile("$name-inp", "txt").toFile()
-        val out = Files.createTempFile("$name-out", "txt").toFile()
-        val err = Files.createTempFile("$name-err", "txt").toFile()
-        inp.writeText(content)
-        pb.redirectInput(ProcessBuilder.Redirect.from(inp))
-        pb.redirectOutput(ProcessBuilder.Redirect.appendTo(out))
-        pb.redirectError(ProcessBuilder.Redirect.appendTo(err))
+    private fun pipeInputToProcess(input: String, process: Process?): ProcessPipes {
+        val out = BufferedReader(InputStreamReader(process?.inputStream))
+        val err = BufferedReader(InputStreamReader(process?.errorStream))
+        val inp = process?.outputStream
 
-        try {
-            pb.start().waitFor(duration, TimeUnit.SECONDS)
-        } finally {
+        return try {
+            inp?.write(input.toByteArray())
+            inp?.flush()
+            inp?.close()
+            process?.waitFor(duration, TimeUnit.SECONDS)
+            ProcessPipes(
+                out.readText().replace("\r\n", "\n"),
+                err.readText().replace("\r\n", "\n"))
+        } catch (e: Exception) {
+            ProcessPipes("", "")
         }
-
-        val pipes = ProcessPipes(out.readText(), err.readText())
-
-        inp.delete()
-        err.delete()
-        out.delete()
-
-        return pipes
     }
 }
