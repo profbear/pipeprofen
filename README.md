@@ -3,7 +3,7 @@ _[pahy-pyoo-proh-fuhn, pahy-peh-proh-fen]_; **noun**
 
 [![](https://img.shields.io/jetbrains/plugin/v/11257-pipeprofen.svg)](https://plugins.jetbrains.com/plugin/11257-pipeprofen)
 [![](https://img.shields.io/jetbrains/plugin/d/11257-pipeprofen.svg)](https://plugins.jetbrains.com/plugin/11257-pipeprofen)
-![](https://img.shields.io/github/issues-raw/profbear/pipeprofen/.svg)
+![](https://img.shields.io/github/issues-raw/profbear/pipeprofen)
 
 
 **Run a bash shell command on the selected lines.**
