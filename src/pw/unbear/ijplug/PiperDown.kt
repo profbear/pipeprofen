@@ -95,7 +95,7 @@ class PiperDown : AnAction() {
                 val all = true
                 selectionModel.removeSelection(all)
             }
-        }, ModalityState.NON_MODAL)
+        }, ModalityState.defaultModalityState())
     }
 
     /** show input dialog to obtain user's args */
