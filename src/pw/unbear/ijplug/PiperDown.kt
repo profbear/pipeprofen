@@ -11,6 +11,7 @@
 package pw.unbear.ijplug
 
 import com.intellij.icons.AllIcons
+import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -49,6 +50,10 @@ class PiperDown : AnAction() {
     private val lastArgs = Key.create<String>("args.last")
 
     data class ProcessPipes(val out: String, val err: String)
+
+    override fun getActionUpdateThread(): ActionUpdateThread {
+        return ActionUpdateThread.BGT
+    }
 
     /** determines visibility and availability of this action in the context menu and keymap */
     override fun update(event: AnActionEvent) {

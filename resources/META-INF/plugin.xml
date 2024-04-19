@@ -11,7 +11,7 @@
   <id>pw.unbear.ijplug</id>
 
   <name>Pipeprofen</name>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <vendor email="professor@unbear.pw"
           url="http://www.unbear.pw">
     the Unbearable Professional
@@ -30,7 +30,7 @@ Invoke with <kbd>ctrl</kbd>-<kbd>alt</kbd>-<kbd>shift</kbd>-<kbd>x</kbd>, or by 
 <p>Being able to run anything in the editor and change the buffer text was heavily inspired by emacs's lisp expressions <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval">(eval-last-sexp), (eval-defun) and (eval-expression)</a>. This plugin is intended to be a drop-in replacement for the antiquated Shell Process plugin.</p>
 ]]></description>
 
-  <idea-version since-build="171.0"/>
+  <idea-version since-build="222.3345.118"/>
   <depends>com.intellij.modules.lang</depends>
 
   <extensions defaultExtensionNs="com.intellij">
