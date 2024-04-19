@@ -1,4 +1,4 @@
-<idea-plugin>
+<idea-plugin require-restart="false">
   <!--
     ~ Copyright (c) 2018 Unbearable Professional
     ~
@@ -11,7 +11,7 @@
   <id>pw.unbear.ijplug</id>
 
   <name>Pipeprofen</name>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <vendor email="professor@unbear.pw"
           url="http://www.unbear.pw">
     the Unbearable Professional
@@ -30,8 +30,6 @@ Invoke with <kbd>ctrl</kbd>-<kbd>alt</kbd>-<kbd>shift</kbd>-<kbd>x</kbd>, or by 
 <p>Being able to run anything in the editor and change the buffer text was heavily inspired by emacs's lisp expressions <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval">(eval-last-sexp), (eval-defun) and (eval-expression)</a>. This plugin is intended to be a drop-in replacement for the antiquated Shell Process plugin.</p>
 ]]></description>
 
-  <change-notes/>
-
   <idea-version since-build="171.0"/>
   <depends>com.intellij.modules.lang</depends>
 
@@ -44,12 +42,11 @@ Invoke with <kbd>ctrl</kbd>-<kbd>alt</kbd>-<kbd>shift</kbd>-<kbd>x</kbd>, or by 
             id="pw.unbear.ijplug.PiperDown"
             text="Pipe selected text to bash">
       <add-to-group
-          group-id="EditorPopupMenu"
-          anchor="last"/>
+        group-id="EditorPopupMenu"
+        anchor="last"/>
       <keyboard-shortcut
-          keymap="$default"
-          first-keystroke="shift ctrl alt X"/>
+        keymap="$default"
+        first-keystroke="shift ctrl alt X"/>
     </action>
   </actions>
-
 </idea-plugin>
