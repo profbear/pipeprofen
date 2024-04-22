@@ -26,9 +26,8 @@ Invoke with <kbd>ctrl</kbd>-<kbd>alt</kbd>-<kbd>shift</kbd>-<kbd>x</kbd>, or by 
 <img src="https://i.imgur.com/yajQkJf.gif" alt="example"></p>
 <p><b>Features</b>
 <ul><li>Remembers the last command arguments</li><li>Treats output containing either stderr and stdout the same</li><li>Works with multiple carets, 1 caret and no carets</li><li>Bug-free on Linux and Windows</li><li>Actively supported - <a href="https://github.com/profbear/pipeprofen/issues"> open an issue on github</a></li><li>Unlicensed, free public domain source</li></ul></p>
-<p><b>Note:</b> you must have bash in your environment's PATH.</p>
-<p>Being able to run anything in the editor and change the buffer text was heavily inspired by emacs's lisp expressions <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval">(eval-last-sexp), (eval-defun) and (eval-expression)</a>. This plugin is intended to be a drop-in replacement for the antiquated Shell Process plugin.</p>
-]]></description>
+<p><b>Note:</b> you must have bash in your operating system environment's PATH.</p>
+<p>Being able to run anything in the editor and change the buffer text was heavily inspired by emacs's lisp expressions <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Eval.html#Lisp-Eval">(eval-last-sexp), (eval-defun) and (eval-expression)</a>. This plugin is intended to be a drop-in replacement for the antiquated Shell Process plugin.</p>]]></description>
 
   <idea-version since-build="222.3345.118"/>
   <depends>com.intellij.modules.lang</depends>
